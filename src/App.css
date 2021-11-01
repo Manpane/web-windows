@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+:root {
+  --desktop_height : 95vh;
+  --taskbar-height : 5vh;
+  --taskbar-color : rgba(10,10,10,0.8);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  letter-spacing: 0.5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.windows{
+  background-color: rgb(5,5,5);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.desktop{
+  background-image: url("./windows.jpg");
+  width: 100%;
+  height: var(--desktop_height);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.taskbar{
+  background-color: var(--taskbar-color);
+  width: 100%;
+  min-height: var(--taskbar-height);
+}
+.taskbar .start-button{
+  background-color: transparent;
+  /* max-height:  var(--taskbar-height); */
+  /* min-height: var(--taskbar-height); */
+  height: var(--taskbar-height);
+  width:var(--taskbar-height);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button .start-button-boxes{
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  height: 50%;
+  margin:1px;
 }
+.start-button .start-button-boxes .start-button-box{
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+  margin: 1px;
+}
+  
+ 
