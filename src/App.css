@@ -3,13 +3,6 @@
   --taskbar-height : 5vh;
   --taskbar-color : rgba(10,10,10,0.8);
 }
-
-*{
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  letter-spacing: 0.5px;
-}
 body{
   margin: 0;
   padding: 0;
@@ -21,6 +14,11 @@ body{
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+.desktop-selection{
+  position: absolute;
+  background-color: rgba(117, 181, 233, 0.5);
+  border: 1px solid rgb(50, 145, 223);
 }
 .desktop{
   background-image: url("./windows.jpg");
